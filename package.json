@@ -1,0 +1,26 @@
+{
+  "name": "todotasks",
+  "version": "1.0.0",
+  "description": "Helping you select your task runners.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ericelliott/todotasks.git"
+  },
+  "keywords": [
+    "tasks",
+    "task",
+    "build",
+    "tools",
+    "tool"
+  ],
+  "author": "Eric Elliott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ericelliott/todotasks/issues"
+  },
+  "homepage": "https://github.com/ericelliott/todotasks"
+}
