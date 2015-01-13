@@ -1,5 +1,6 @@
 lib
 .DS_Store
+dist/
 
 # Created by https://www.gitignore.io
 
