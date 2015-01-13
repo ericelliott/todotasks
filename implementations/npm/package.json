@@ -6,13 +6,14 @@
   "scripts": {
     "postinstall": "bower install",
     "test": "node test/test.js",
-    "devbuild": "",
-    "dev": "",
     "clean": "rimraf dist/*",
     "lint": "eslint js/**.js",
-    "precompile": "npm run lint && npm run test && npm run clean",
+    "compile-styles": "node-sass bower_components/todomvc-common/*.css dist/app.css",
+    "precompile": "npm run lint && npm run test && npm run clean && npm run compile-styles",
     "compile": "browserify js/app.js -d -p [minifyify --map app.map.json --output dist/bundle.map.json] > dist/app.js",
-    "build": "npm run compile"
+    "build": "npm run compile",
+    "devbuild": "",
+    "dev": ""
   },
   "keywords": [
     "tasks",
