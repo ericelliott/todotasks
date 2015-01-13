@@ -12,7 +12,8 @@ example](https://github.com/tastejs/todomvc/tree/gh-pages/examples/backbone).
 
 ```bash
 git clone https://github.com/ericelliott/todotasks.git
-cd todotasks
+cp -r todotasks/implementations/base todotasks/implementations/<your-build-process-name>
+cd todotasks/implementations/<your-build-process-name>
 npm install
 ```
 
