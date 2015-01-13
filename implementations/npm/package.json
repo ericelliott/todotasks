@@ -8,7 +8,7 @@
     "test": "node test/test.js",
     "devbuild": "",
     "dev": "",
-    "clean": "rm -rf dist/*",
+    "clean": "rimraf dist/*",
     "lint": "eslint js/**.js",
     "precompile": "npm run lint && npm run test && npm run clean",
     "compile": "browserify js/app.js -d -p [minifyify --map app.map.json --output dist/bundle.map.json] > dist/app.js",
@@ -39,6 +39,7 @@
     "exorcist": "^0.1.6",
     "minifyify": "^5.0.0",
     "node-sass": "^2.0.0-beta",
+    "rimraf": "^2.2.8",
     "tape": "^3.0.3",
     "uglify": "^0.1.1",
     "uglify-js": "^2.4.16"
