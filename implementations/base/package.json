@@ -1,15 +1,16 @@
 {
   "name": "todotasks",
   "version": "1.0.0",
-  "description": "Helping you select your task runners.",
+  "description": "Base project for new taskrunner configurations.",
   "main": "index.js",
   "scripts": {
     "postinstall": "bower install",
-    "test": "npm test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ericelliott/todotasks.git"
+    "test": "node test/test.js",
+    "devbuild": "",
+    "dev": "",
+    "lint": "",
+    "clean": "",
+    "build": ""
   },
   "keywords": [
     "tasks",
