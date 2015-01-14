@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Helping you select your task runners.",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/ericelliott/todotasks.git"
