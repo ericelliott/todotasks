@@ -7,14 +7,18 @@
     "postinstall": "bower install",
     "clean": "rimraf dist/*",
     "lint": "eslint js/**.js",
-    "compile-styles": "node-sass bower_components/todomvc-common/*.css dist/app.css",
-    "precompile": "npm run lint && npm run clean && npm run compile-styles",
+    "compile:styles": "node-sass bower_components/todomvc-common/*.css dist/app.css",
     "compile": "browserify js/app.js -d -p [minifyify --map app.map.json --output dist/bundle.map.json] > dist/app.js",
     "test": "node test/test.js",
+    "prebuild": "npm run lint && npm run clean && npm run compile:styles",
     "build": "npm run compile",
     "postbuild": "npm run test",
-    "devbuild": "",
-    "dev": ""
+    "watch:compile": "watch --wait=5 'npm run lint && npm run compile' js/",
+    "watch:styles": "watch --wait=5 'npm run compile:styles' bower_components/todomvc-common/",
+    "watch:dist": "watch --wait=5 'npm run test' dist/",
+    "watch:test": "watch --wait=5 'npm run test' test/",
+    "predev": "npm run build",
+    "dev": "parallelshell 'npm run watch:compile' 'npm run watch:styles' 'npm run watch:dist' 'npm run watch:test'"
   },
   "keywords": [
     "tasks",
@@ -41,9 +45,11 @@
     "exorcist": "^0.1.6",
     "minifyify": "^5.0.0",
     "node-sass": "^2.0.0-beta",
+    "parallelshell": "^1.0.3",
     "rimraf": "^2.2.8",
     "tape": "^3.0.3",
     "uglify": "^0.1.1",
-    "uglify-js": "^2.4.16"
+    "uglify-js": "^2.4.16",
+    "watch": "^0.13.0"
   }
 }
