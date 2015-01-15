@@ -8,7 +8,7 @@
     "clean": "rimraf dist/*",
     "lint": "eslint js/**.js",
     "compile:styles": "node-sass bower_components/todomvc-common/*.css dist/app.css",
-    "compile": "browserify js/app.js -d -p [minifyify --map app.map.json --output dist/bundle.map.json] > dist/app.js",
+    "compile": "browserify js/app.js -d -p [minifyify --map app.map.json --output dist/app.map.json] > dist/app.js",
     "test": "node test/test.js",
     "prebuild": "npm run lint && npm run clean && npm run compile:styles",
     "build": "npm run compile",
