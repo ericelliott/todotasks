@@ -61,14 +61,11 @@ This repository should be all setup, ready for your build tool to compile:
 > 
 >  * Simple `dev` command that watches files for changes, then rebuilds *only what
 >    needs to be rebuilt*
->  * Example that transpiles from ES6 or CoffeScript, configurable to do so with
->    or without sourcemaps
->  * Build CSS system with sprite generator
+>  * Build CSS system
 >  * Lint on build and display results in that dev command console output
->  * Run smoke tests on change
+>  * Run unit tests on change
 >  * Full build command that kicks off cross-platform testing (e.g. Sauce Labs
 >    cloud testing)
->  * Am I missing anything?
 > 
 > ### What we really need is TodoMVC for build systems
 > 
