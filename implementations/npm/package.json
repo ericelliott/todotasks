@@ -6,10 +6,10 @@
   "scripts": {
     "postinstall": "bower install",
     "clean": "rimraf dist/*",
-    "lint": "eslint js/**.js",
+    "lint": "eslint js/**.js test/*.js",
     "compile:styles": "node-sass bower_components/todomvc-common/*.css dist/app.css",
     "compile": "browserify js/app.js -d -p [minifyify --map app.map.json --output dist/app.map.json] > dist/app.js",
-    "test": "node test/test.js",
+    "test": "tape test/test.js | faucet",
     "prebuild": "npm run lint && npm run clean && npm run compile:styles",
     "build": "npm run compile",
     "postbuild": "npm run test",
@@ -17,8 +17,13 @@
     "watch:styles": "watch --wait=5 'npm run compile:styles' bower_components/todomvc-common/",
     "watch:dist": "watch --wait=5 'npm run test' dist/",
     "watch:test": "watch --wait=5 'npm run test' test/",
-    "predev": "npm run build",
-    "dev": "parallelshell 'npm run watch:compile' 'npm run watch:styles' 'npm run watch:dist' 'npm run watch:test'"
+    "predev": "npm run build && npm run http-server dist/",
+    "dev": "parallelshell 'npm run watch:compile' 'npm run watch:styles' 'npm run watch:dist' 'npm run watch:test'",
+    "prebrowsertest": "npm run build",
+    "browsertest": "tape test/browsertest.js | faucet"
+  },
+  "defaultConfig": {
+    "port": "5150"
   },
   "keywords": [
     "tasks",
@@ -44,10 +49,14 @@
     "browserify": "^8.1.0",
     "eslint": "^0.11.0",
     "exorcist": "^0.1.6",
+    "express": "^4.11.0",
+    "faucet": "0.0.1",
+    "http-server": "^0.7.4",
     "minifyify": "^5.0.0",
     "node-sass": "^2.0.0-beta",
     "parallelshell": "^1.0.3",
     "rimraf": "^2.2.8",
+    "supertest": "^0.15.0",
     "tape": "^3.0.3",
     "uglify": "^0.1.1",
     "uglify-js": "^2.4.16",
