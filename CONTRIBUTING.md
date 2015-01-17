@@ -44,6 +44,7 @@ Example `package.json`:
     "compile-styles": "gulp dostyles",
     "compile": "gulp dojs",
     "build": "gulp doitall",
+    "test": "gulp test",
     "dev": "gulp watchmystuff"
   },
   "author": "",
@@ -63,17 +64,19 @@ Use *node-sass* to compile `bower_components/todomvc-common/*.css`and output to 
 **compile**
 Use *browserify* to generate `dist/app.js` from the file `js/app.js`. This should also use the *minifyify* plugin to minify the output.
 
+**test**
+Run tests from the `/test` directory.
+
 **build**
 This task should perform all of the above tasks in order. Note that this should use the implementations own internal task references.
 
 **dev**
 This is the most complicated task. It should watch `js` for changes. When a change is detected do the following:
-    - run *eslint* against all files in`js` and display any errors to *stdout*. Linting errors should not stop this task.
-    - rebuild the browserified file at `dist/app.js`. To make this task fast, strive to rebuild only what needs to be rebuilt.
- This task should also watch for changes to `bower_components/todomvc-common/*.css` files and run *node-sass* to rebuild them on change.
+    - Run *eslint* against all files in`js` and display any errors to *stdout*. Linting errors should not stop this task.
+    - Rebuild the browserified file at `dist/app.js`. To make this task fast, strive to rebuild only what needs to be rebuilt.
+    - Run the unit tests again.
 
-**test**
-Run tests from the `/test` directory.
+This task should also watch for changes to `bower_components/todomvc-common/*.css` files and run *node-sass* to rebuild them on change.
 
 
 README.MD
