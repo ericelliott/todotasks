@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Helping you select your task runners.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "clone": "node scripts/clonebase.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ericelliott/todotasks.git"
@@ -28,6 +30,9 @@
     "bower": "^1.3.12"
   },
   "devDependencies": {
+    "ask-for": "0.0.3",
+    "chalk": "^0.5.1",
+    "directory-copy": "^0.1.0",
     "eslint": "^0.11.0",
     "node-sass": "^2.0.0-beta",
     "tape": "^3.0.3",
