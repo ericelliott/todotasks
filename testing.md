@@ -83,9 +83,10 @@ For these examples, we'll use [tape](https://github.com/substack/tape) and [fauc
 
 Integration tests are written to ensure that component interactions behave appropriately. Take the example above where you may want to test that a module can properly interact with a datastore. One way to do that is to mock the datastore dependency and use unit tests.
 
-Another approach is to actually connect to a real database and test that the database state gets updated appropriately when the module interacts with it. There is a superset of integration tests that may make a dedicated integration test suite unnecessary (depending on the needs of your particular app)... Functional tests.
+Another approach is to actually connect to a real database and test that the database state gets updated appropriately when the module interacts with it. We're going to skip dedicated integration tests for this simple example code.
 
-We're going to skip integration tests for this simple example code.
+There is a superset of integration tests that may make a dedicated integration test suite unnecessary (depending on the needs of your particular app)... Functional tests.
+
 
 
 ## Functional Tests
