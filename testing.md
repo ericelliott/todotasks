@@ -9,7 +9,7 @@ We'll be using ES6 syntax just for reading simplicity. `() =>` means `function`,
 
 ## Unit Tests
 
-Unit tests validate individual modules by testing the module's API surface. The best use case for a unit test is when a function maps from some inputs to some output in a predictable way:
+Unit tests validate individual modules by testing the module's API surface. The best use case for a unit test is when a function maps from some inputs to some output in a predictable way. i.e.:
 
 ```
 (a[, b, c...]) => d
