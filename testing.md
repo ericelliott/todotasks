@@ -39,7 +39,7 @@ let stringTime = () => {
 };
 ```
 
-In those cases, you can't assert against a specific value, so you should try to get a close approximation instead:
+You can't assert against a specific value, so you should try to get a close approximation instead:
 
 ```js
 test('stringTime', (assert) => {
