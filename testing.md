@@ -2,7 +2,7 @@
 
 Most apps should eventually have two or three sets of test suites: Unit tests, integration tests, and functional tests.
 
-**A note about examples:***
+**A note about examples:**
 
 We'll be using ES6 syntax just for reading simplicity. `() =>` means `function`, `let` is block-scoped `var` (used here just to remind the reader that we're talking about ES6), and `(...args)` creates an `args` array containing all the arguments that follow the `...`.
 
