@@ -1,4 +1,4 @@
-# TodoTasks
+# TodoTasks [Status: DEPRECATED -- Use Next.js or create-react-app instead.]
 
 TodoMVC for task runners. Not sure which task runner to use? Take a look at some
 reference implementations.
